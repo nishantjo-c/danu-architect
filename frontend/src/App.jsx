@@ -3,7 +3,9 @@ import Main from "./components/mainpage";
 function App() {
   return (
     <>
-      <Main />
+      <div class="main">
+        <Main />
+      </div>
     </>
   );
 }
