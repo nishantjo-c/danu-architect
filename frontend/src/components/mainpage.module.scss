@@ -13,37 +13,71 @@
     display:table;
   }
 }
+
 .navigation{
+  
+  &__checkbox{
+    display:none;
+  }
+
   float:right;
   border-top:2px solid black;
-  height:10px;
-  width:50px;
+  width:60px;
+  height:20px;
   position:relative;
-}
-.navigation::after{
+  transition: all .2s;
+  cursor:pointer;
+  
+  &:hover{
+    width:39px;
+  }
+  
+  &:after{
     content:'';
     position:absolute;
     border-top:2px solid black;
-    width:70%;
-    height:100%;
-    top:5px;
+    width:39px;
+    height:auto;
+    top:8px;
     right:0;
+    transition: all .2s;
+  }
+  &__checkbox:checked + .navigation{
+    width:39px;  
+    transform: rotate(45deg);
+  }
+  &__checkbox:checked + .navigation:after{
+    width:39px;
+    top:-2px;
+    transform: rotate(-90deg);
+  }
+
+}
+
+.navigation:hover::after{
+    width:60px;
 }
 .main{
   display:flex;
   align-items:center;
   justify-content:center; 
   height:100%;
+  gap:1%;
+
   &__title{
     height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
+    font-size:60px;
+    margin-top:-12%;
   }
+
   &__quote{
     height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
+    font-size:30px;
   }
 }
