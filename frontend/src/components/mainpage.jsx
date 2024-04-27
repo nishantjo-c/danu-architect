@@ -3,9 +3,11 @@ import mainpagecss from "./mainpage.module.scss";
 function Main() {
   return (
     <div className={mainpagecss.mainpage}>
-      <div className={mainpagecss.clearfix}>
+      <div className={`${mainpagecss.clearfix} ${mainpagecss.navigation}`}>
         <input type="checkbox" className={mainpagecss.navigation__checkbox} id="navi-toggle" />
-        <label className={mainpagecss.navigation} for="navi-toggle"></label>
+        <label className={mainpagecss.navigation__btn} for="navi-toggle">
+          <span className={mainpagecss.navigation__btn__value}></span>
+        </label>
       </div>
      
       <div className={mainpagecss.main}>

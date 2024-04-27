@@ -14,49 +14,58 @@
   }
 }
 
-.navigation{
+.navigation{ 
   
-  &__checkbox{
+  &__checkbox {
     display:none;
   }
-
-  float:right;
-  border-top:2px solid black;
-  width:60px;
-  height:20px;
-  position:relative;
-  transition: all .2s;
-  cursor:pointer;
   
-  &:hover{
-    width:39px;
-  }
-  
-  &:after{
-    content:'';
-    position:absolute;
-    border-top:2px solid black;
-    width:39px;
-    height:auto;
-    top:8px;
-    right:0;
-    transition: all .2s;
-  }
-  &__checkbox:checked + .navigation{
-    width:39px;  
-    transform: rotate(45deg);
-  }
-  &__checkbox:checked + .navigation:after{
-    width:39px;
-    top:-2px;
-    transform: rotate(-90deg);
-  }
-
-}
-
-.navigation:hover::after{
+  &__btn {
+    padding:10px;
+    float:right;
+    height:20px;
     width:60px;
+    position:relative;
+    cursor:pointer;
+
+    &__value {
+      border-top:2px solid black; 
+      display:inline-block;
+      width:inherit;
+      position:absolute;
+      right:0;
+      transition: all .2s;
+    }
+
+    &__value::after{
+      content:'';
+      position:absolute;
+      right:0;
+      border-top:2px solid black;
+      top:8px;
+      width:39px;
+      transition: all .2s;
+    }
+
+    &:hover &__value{
+      width:39px;
+    }
+
+    &:hover &__value::after{
+      width:60px;
+    }
+  }
+  &__checkbox:checked + &__btn &__btn__value{
+    width:39px;
+    transform:rotate(45deg);
+  }
+  &__checkbox:checked + &__btn &__btn__value::after{
+    top:0;
+    width:39px;
+    transform:rotate(-90deg);
+  }
 }
+
 .main{
   display:flex;
   align-items:center;
