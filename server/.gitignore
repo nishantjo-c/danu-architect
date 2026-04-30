@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment (VERY IMPORTANT)
+bin/
+include/
+lib/
+lib64/
+pyvenv.cfg
+
+# If you rename venv later
+venv/
+.env/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
