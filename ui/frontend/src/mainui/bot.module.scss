@@ -1,0 +1,35 @@
+.bot{
+    border: 2px solid black;
+    height: 400px;
+    width: 300px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+
+    &__message{
+        flex: 1;
+    }
+
+    &__inputWrapper{
+        position: relative;
+    }
+
+    &__input {
+        border: 2px solid black;
+        height: 60px;
+        width: 250px;
+        margin-bottom:10px;
+        resize: none;
+        border-radius: 10px;
+    }
+
+    &__send{
+        position:absolute;
+        right:10px;
+        bottom:35px;
+    }
+}
